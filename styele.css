@@ -1,0 +1,228 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*:focus{
+    outline:none;
+}
+
+body{
+    position: relative;
+    background:rgb(224, 216, 216);
+    font-family: 'roboto',sans-serif;
+    height: 200vh;
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    align-items: center;
+    padding: 0  2.5vm;
+    background-color: white
+}
+.toggle-btn{
+    position: relative;
+    cursor: pointer;
+    width: 20px;
+    height: 10px;
+    cursor: pointer;
+}
+.toggle-btn span{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 50%;
+    background-color: black;
+    transform: translate(30%);
+}
+.toggle-btn span:nth-child(1){
+    top:0;
+}
+.toggle-btn span:nth-child(2){
+    top: 100%;
+} 
+.logo{
+    width: 100px;
+    margin-left: 10px;
+    margin-top: -10ppx;
+}
+.search-bar{
+    position: relative;
+    max-width: 500px;
+    width: 50%;
+    height: 35px;
+    display: flex;
+}
+.search-box{
+  width: 85%;
+  height: 100%;
+  border-radius: 50px;
+  padding: 0 20px;
+  text-transform: capitalize;
+}
+.search-btn{
+    width: 15%;
+    border:none;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    padding: 5px 0;
+    border-left: none;
+}
+.search-btn img{
+    height: 100%;
+}
+.user-options{
+    height: 35px;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+.user-options .icon{
+    height: 80%;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.user-options .sk{
+    height:28px;
+    width: 28px;
+    border-radius: 50%;
+    margin-right: 35px;
+    align-items: center;
+    overflow:hidden;
+    margin-top: 5%;
+}
+
+.side-bar{
+    position:fixed;
+    top: 60px;
+    left: 0;
+    min-width: 250px;
+    width: 250px;
+    background-color: rgb(255, 255, 255);
+    padding-right:10px;
+    height: 100%;
+}
+
+.links{
+    display: block;
+    width: 100%;
+    display:flex;
+    padding: 10px 20px;
+    align-items: center;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 500;
+    color: black;
+    text-transform: capitalize
+}
+
+.links img{
+    margin-right: 30px;
+    height: 25px;
+}
+
+.links:hover,.links.active{
+    background-color:cornflowerblue;
+    transition: all 1s;
+}
+.sep{
+    border: none;
+    margin-top: 40px;
+    border-radius: 50%;
+}
+
+
+.filter{
+    position: fixed;
+    background-color: white;
+    left: 252px;
+    top: 0px;
+    height: 60px;
+    margin-top: 62px;
+    width: calc(100% - 250px);
+    border-top: 1px solid white;
+    border-bottom: 1px white;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+ 
+}
+.filter::-webkit-scrollbar{  
+    display: none;
+}
+.filter-options{
+    flex: 0 0 auto;
+    padding: 10px 20px;
+    background:white ;
+    border-radius: 50px;
+   
+    border: 1px solid black;
+    color: rgb(53, 11, 11);
+    text-transform: capitalize;
+    margin-right: 10px;
+    font-size: 15px;
+}
+.filter-options:hover,.filter-options.active{
+    background-color:rgb(27, 27, 29);
+    color: white;
+    transition: all 1s;
+    cursor: pointer;
+}
+
+.videocontainer{
+
+    width: calc(100% - 250px);
+
+    margin-top: 120px;
+    margin-left: 250px;
+
+    padding: 20px;
+    display: grid;
+
+    grid-template-columns: repeat(4,25%);
+    grid-gap: 20px 5px;
+    overflow-x: hidden;
+
+}
+.video{
+    min-height: 250px;
+    height:auto;
+
+}
+.thumbnail{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+.content{
+    width: 100%;
+    height: 100px;
+
+    display: flex;
+    justify-content:space-between;
+    padding:10px;
+}
+
+.content .logo{
+    border-radius: 50%;
+    height: 37px;
+    width: 60px;
+    margin-right: 10px;
+
+}
+.title{
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+}
+.channel-name{
+    font-size: 14px;
+    margin: 2px 0;
+    color: gray;
+}
